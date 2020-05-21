@@ -20,6 +20,6 @@ const SEED = process.env.SEED;
         JwtModule.register({secret:SEED , signOptions: {expiresIn: 4 * 60 * 60}})
     ],
     providers: [AuthService, JwtStrategy],
-    exports: [PassportModule, JwtStrategy]
+    exports: [PassportModule, JwtStrategy, MongooseModule]
 })
 export class AuthModule { }
